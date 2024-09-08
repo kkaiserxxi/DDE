@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dashboard</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+
+        /* Sidebar styles */
+        #sidebar {
+            width: 250px;
+            background: #333;
+            min-height: 100vh;
+            color: #fff;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #sidebar .brand {
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #sidebar .brand .text {
+            font-size: 20px;
+        }
+
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #sidebar ul li {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #sidebar ul li.active {
+            background: #575757;
+        }
+
+        #sidebar ul.side-menu {
+            margin-top: auto;
+        }
+
+        #sidebar ul.side-menu .logout {
+            background: #e74c3c;
+        }
+
+        /* Main content styles */
+        #content {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            padding: 20px;
+            background: #f4f7fa;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .head-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .head-title h1 {
+            margin: 0;
+        }
+
+        .table-data {
+            margin-top: 20px;
+        }
+
+        .table-data .order {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-data .head {
+            padding: 15px 20px;
+            background: #3498db;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table thead {
+            background: #3498db;
+            color: #fff;
+        }
+
+        table th,
+        table td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .status.completed {
+            background: #2ecc71;
+        }
+
+        .status.pending {
+            background: #f1c40f;
+        }
+
+        .status.process {
+            background: #e67e22;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <a href="#" class="brand">
+            <i class='bx bxs-smile'></i>
+            <span class="text">Admin Dashboard</span>
+        </a>
+        <span class="text brand1">Welcome, Admin</span>
+        <ul class="side-menu top">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span class="text">Users</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span class="text">Booking</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span class="text">Contact Us</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="side-menu">
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class='bx bx-menu'></i>
+        </nav>
+        <!-- NAVBAR -->
+
+        <!-- MAIN -->
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Users</h1>
+                </div>
+            </div>
+
+            <div class="table-data">
+                <div class="order">
+                    <div class="head">
+                        <h3>Users List</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Admin ID</th>
+                                <th>User Name</th>
+                                <th>Email</th>
+                                <th>Password</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Example user data -->
+                            <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td>********</td>
+                                <td><a href="#" onclick="return confirm('Delete this account? The user-related information will also be deleted!')"><i class="fa-solid fa-trash"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                                <td>********</td>
+                                <td><a href="#" onclick="return confirm('Delete this account? The user-related information will also be deleted!')"><i class="fa-solid fa-trash"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Michael Johnson</td>
+                                <td>michael@example.com</td>
+                                <td>********</td>
+                                <td><a href="#" onclick="return confirm('Delete this account? The user-related information will also be deleted!')"><i class="fa-solid fa-trash"></i></a></td>
+                            </tr>
+                            <!-- Add more users as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+    <script>
+        // JavaScript for interactivity, such as sidebar toggle
+        document.querySelector('.bx-menu').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png">
+    <title>Admin Login</title>
+    <script src="https://kit.fontawesome.com/73358cb070.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .qqq {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        #inputButtonLogin {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #inputButtonLogin:hover {
+            background-color: #0056b3;
+        }
+
+        .message {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .message i {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            color: #721c24;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="message-container"></div>
+
+<form id="loginForm">
+    <h2>Login Admin</h2>
+    <div class="qqq">
+        <input id="inputLoginText" name="name" type="text" placeholder="Your User Name" required>
+        <p id="p1"></p>
+    </div>
+    
+    <div class="qqq">
+        <input id="inputLoginPassword" name="pass" type="password" placeholder="Enter Password" required>
+        <p id="p2"></p>
+    </div>
+    
+    <input id="inputButtonLogin" name="submit" type="submit" value="Login">
+</form>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('inputLoginText').value.trim();
+        const pass = document.getElementById('inputLoginPassword').value.trim();
+        const messageContainer = document.getElementById('message-container');
+
+        messageContainer.innerHTML = '';
+
+        // Simulate login verification (this should be replaced with real verification)
+        const correctName = 'admin'; // Replace with actual admin credentials
+        const correctPass = '12345'; // Replace with actual password
+
+        if (name === '' || pass === '') {
+            showMessage('All fields are required!');
+        } else if (name !== correctName || pass !== correctPass) {
+            showMessage('Incorrect username or password!');
+        } else {
+            showMessage('Login successful!', 'success');
+            // Simulate redirecting to another page
+            setTimeout(() => {
+                window.location.href = 'users.html'; // Change to the actual page you want to redirect to
+            }, 2000);
+        }
+    });
+
+    function showMessage(message, type = 'error') {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message');
+        messageDiv.innerHTML = `<span>${message}</span> <i class="fas fa-times" onclick="this.parentElement.remove();"></i>`;
+        document.getElementById('message-container').appendChild(messageDiv);
+    }
+</script>
+
+</body>
+</html>

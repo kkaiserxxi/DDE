@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+        #sidebar .brand {
+            text-align: center;
+            padding: 10px 0;
+            font-size: 22px;
+            text-decoration: none;
+            color: #ecf0f1;
+        }
+        .brand1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .side-menu {
+            list-style: none;
+            padding: 0;
+        }
+        .side-menu li {
+            margin: 15px 0;
+        }
+        .side-menu a {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .side-menu a:hover {
+            background-color: #34495e;
+        }
+        .logout {
+            color: #e74c3c;
+        }
+        #content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+        }
+        .head-title {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+        .message {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .message i {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+
+<section id="sidebar">
+    <a href="#" class="brand">
+        <i class='bx bxs-smile'></i>
+        <span class="text text2">Dashboard</span>
+    </a>
+    <span class="text brand1">Welcome, Admin</span>
+    <ul class="side-menu top">
+        <li>
+            <a href="#">
+                <i class='bx bxs-cog'></i>
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li class="active">
+            <a href="#">
+                <i class='bx bxs-cog'></i>
+                <span class="text">Users</span>
+            </a>
+        </li>
+        <li class="active">
+            <a href="#">
+                <i class='bx bxs-cog'></i>
+                <span class="text">Booking</span>
+            </a>
+        </li>
+        <li class="active">
+            <a href="#">
+                <i class='bx bxs-cog'></i>
+                <span class="text">Contact Us</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="side-menu">
+        <li>
+            <a href="#" class="logout">
+                <i class='bx bxs-log-out-circle'></i>
+                <span class="text">Logout</span>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<section id="content">
+    <nav>
+        <i class='bx bx-menu'></i>
+    </nav>
+
+    <main>
+        <div class="head-title">
+            <div class="left">
+                <h1>Users</h1>
+            </div>
+        </div>
+
+        <div class="table-data">
+            <div class="order">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Admin ID</th>
+                            <th>User Name</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTable">
+                        <!-- Users will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</section>
+<!-- CONTENT -->
+<?php
+if(isset($message)){
+   foreach($message as $message){
+      echo '
+      <div>
+         <span>'.$message.'</span>
+         <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+      </div>
+      ';
+   }
+}
+?>
+
+<script src="booking.js"></script>
+</body>
+</html>

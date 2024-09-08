@@ -1,0 +1,31 @@
+    /* Custom CSS for FullCalendar */
+    .bg-green {
+        background-color: #4caf50; /* Green */
+        color: white; /* White text */
+    }
+
+    .bg-yellow {
+        background-color: #ffeb3b; /* Yellow */
+        color: black; /* Black text */
+    }
+
+    .bg-red {
+        background-color: #f44336; /* Red */
+        color: white; /* White text */
+    }
+
+    /* Customize calendar header */
+    .fc-header-toolbar {
+        margin-bottom: 10px;
+    }
+
+    /* Customize event titles */
+    .fc-event-title {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    #calendar {
+        margin: 20px;
+        background: white;
+    }

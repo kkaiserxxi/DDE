@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .add-products {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .inputBox {
+            margin-bottom: 15px;
+        }
+
+        .box {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .add-btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .add-btn:hover {
+            background-color: #218838;
+        }
+
+        .messages {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .messages i {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+
+<div id="message-container"></div>
+
+<section class="add-products">
+    <form id="adminForm">
+        <div class="flex">
+            <div class="inputBox">
+                <input type="text" name="name" required placeholder="Enter Username For New Admin" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+            </div>
+            <div class="inputBox">
+                <input type="email" name="email" required placeholder="Enter Email For New Admin" maxlength="50" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+            </div>
+            <div class="inputBox">
+                <input type="password" name="pass" required placeholder="Enter Password" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+            </div>
+            <div class="inputBox">
+                <input type="password" name="cpass" required placeholder="Confirm Password" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+            </div>
+        </div>
+        <input type="submit" value="Register Now" class="add-btn">
+    </form>
+</section>
+
+<script>
+    document.getElementById('adminForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.querySelector('input[name="name"]').value.trim();
+        const email = document.querySelector('input[name="email"]').value.trim();
+        const pass = document.querySelector('input[name="pass"]').value.trim();
+        const cpass = document.querySelector('input[name="cpass"]').value.trim();
+        const messageContainer = document.getElementById('message-container');
+
+        messageContainer.innerHTML = '';
+
+        if (name === '' || email === '' || pass === '' || cpass === '') {
+            showMessage('All fields are required!');
+            return;
+        }
+
+        if (pass !== cpass) {
+            showMessage('Confirm password does not match!');
+            return;
+        }
+
+        showMessage('New admin registered successfully!', 'success');
+    });
+
+    function showMessage(message, type = 'error') {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('messages');
+        messageDiv.innerHTML = `<span>${message}</span> <i class="fas fa-times" onclick="this.parentElement.remove();"></i>`;
+        document.getElementById('message-container').appendChild(messageDiv);
+    }
+</script>
+
+</body>
+</html>
