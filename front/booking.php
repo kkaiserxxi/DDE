@@ -393,7 +393,7 @@
             <h2>VR Experience</h2>
             <h6>VR ExperienceVR ExperienceVR Experience</h6>
 
-            <form action="connect3.php" method="post">
+            <form  id="booking_VR_Form" action="connect3.php" method="post">
                 <label for="FullName">Full Name:</label>
                 <input type="text" id="FullName" name="FullName" required>
 
@@ -426,7 +426,7 @@
             <h2>Underwater Photography</h2>
             <h6>Underwater PhotographyUnderwater PhotographyUnderwater </h6>
            
-            <form action="connect.php" method="post">
+            <form id="booking_Form" action="connect.php" method="post" action="bill.php" >
                 <label for="FullName">Full Name:</label>
                 <input type="text" id="FullName" name="FullName" required>
 

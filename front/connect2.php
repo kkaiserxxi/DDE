@@ -26,11 +26,13 @@ if($conn->connect_error){
         die('Execute() failed: ' . $stmt->error);
     }
     
-    echo "Thank you for contactus";
-    
     // Close the statement and connection
     $stmt->close();
     $conn->close();
+    
+    // Redirect back to the contact page with a success message
+    header("Location: contact.php?success=1");
+    exit();
 }
 
 ?>
