@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="css/owl.carousel.min.css">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->can 
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- Style -->
