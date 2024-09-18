@@ -1,0 +1,45 @@
+.gallery {
+    width: 90%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* التعديل في CSS */
+.gallery img {
+    width: 100%;
+    height: 200px;
+    /* كل الصور ستكون بارتفاع 200 بكسل */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, top 0.3s ease, border-radius 0.3s ease;
+    /* إضافة انتقال لتنعيم الحواف */
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.gallery img.active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    /* عرض الصورة عند التكبير */
+    height: auto;
+    /* ضبط الارتفاع تلقائياً ليحافظ على النسبة */
+    transform: translate(-50%, -50%) scale(1);
+    /* تكبير الصورة وتوسيطها */
+    z-index: 1000;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    /* تنعيم الحواف عند التكبير */
+    transition: transform 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
+    /* تأكيد الانتقال بسلاسة */
+}
+
+

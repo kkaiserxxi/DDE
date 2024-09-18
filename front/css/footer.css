@@ -1,0 +1,126 @@
+   /* تصميم الهيدر والفوتر */
+   footer {
+    background: #021024;
+    color: #C1E8FF;
+    padding: 40px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+}
+
+footer h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #fff;
+}
+
+.contact-list, .link-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li, .link-menu li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contact-list li i, .link-menu li a {
+    margin-right: 10px;
+}
+
+.contact-list a {
+    color: #C1E8FF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+    color: #00b4d8;
+}
+
+.link-menu a {
+    color: #C1E8FF;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.link-menu a:hover {
+    color: #00b4d8;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* تصميم العنصر النشط Active */
+.link-menu a.active,
+.site-menu a.active {
+    color: #e0e6e7;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.link-menu a.active:hover,
+.site-menu a.active:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* تصميم القائمة بنظام الأعمدة */
+.link-menu {
+    list-style: none;
+    padding: 0;
+    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+
+/* عند الشاشات الأكبر من 768px */
+@media (min-width: 768px) {
+    .link-menu {
+        grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+    }
+}
+
+.link-menu li {
+    margin-bottom: 0;
+}
+
+.link-menu a {
+    color: #C1E8FF;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.link-menu a:hover {
+    color: #00b4d8;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* تحسين التصميم على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .link-menu a {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

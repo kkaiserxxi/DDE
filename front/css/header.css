@@ -1,0 +1,113 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #1e3a8a;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Navigation */
+.nav-links {
+    gap: 10px;
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 8px 16px;
+    
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+    display: block; /* يضمن أن الرابط يأخذ كامل عرض العنصر */
+}
+
+.nav-links a:hover {
+    background: #3b82f6; /* لون الخلفية عند التمرير */
+    color: #ffffff; /* لون النص عند التمرير */
+    width: 100%; /* ملء عرض العنصر بالكامل */
+}
+
+.nav-links a.active {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        list-style: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #1e3a8a;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links a:hover {
+        background: #3b82f6;
+    }
+
+    .nav-links a {
+        font-size: 25px;
+        padding: 10px 20px;
+        display: block; /* تأكد من أن الرابط يملأ عرض العنصر بالكامل في وضع الهاتف */
+    }
+}

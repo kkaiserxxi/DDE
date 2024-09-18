@@ -1,0 +1,159 @@
+
+/* Booking Section */
+.booking-section {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.booking-form {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    height: 750px;
+
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.form-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.form-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.form-cover .form-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.form-cover .form-description {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.form-cover:hover .form-description {
+    display: block;
+}
+
+.booking-form.hidden .form-cover {
+    transform: translateY(-100%);
+    height: 0;
+}
+
+.booking-form.hidden form {
+    display: block;
+}
+
+form {
+    display: none;
+}
+
+.booking-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #052659;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.booking-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.booking-form button {
+    background: #052659;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.booking-form button:hover {
+    background: #00b4d8;
+}
+
+
+@media (max-width: 767px) {
+    .booking-section {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+        /* تقليل المسافة بين العناصر */
+    }
+
+    .booking-form {
+        width: 100%;
+        max-width: none;
+        /* إزالة أقصى عرض للفورم */
+        margin: 0;
+        /* إزالة الهوامش حول الفورم */
+    }
+
+    .form-cover .form-title,
+    .form-cover .form-description {
+        font-size: 14px;
+        /* تقليل حجم الخط على الهواتف */
+        padding: 3px 5px;
+        /* تقليل الحشوة */
+    }
+
+    .booking-form h2 {
+        font-size: 20px;
+        /* تقليل حجم خط العنوان */
+    }
+
+    .booking-form input {
+        width: 100%;
+        /* استخدام العرض الكامل للإدخالات */
+        padding: 8px;
+        /* تقليل الحشوة في الإدخالات */
+    }
+
+    .booking-form button {
+        font-size: 14px;
+        /* تقليل حجم الخط في الأزرار */
+        padding: 8px;
+        /* تقليل الحشوة في الأزرار */
+    }
+}

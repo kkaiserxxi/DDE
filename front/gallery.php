@@ -15,6 +15,7 @@
     <link rel="icon" href="https://i.pinimg.com/originals/88/33/f2/8833f2811794959bdcc2433a512a7bac.png"
         type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
@@ -25,200 +26,10 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/gallery.css">
 
-    <style>
-     /* Reset CSS */
-     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: #C1E8FF;
-        color: #333;
-        flex-wrap: wrap;
-    }
-    
-        /* Header */
-        header {
-            background: #052659;
-            position: fixed;
-            /* يجعل الهيدر ثابتًا في أعلى الصفحة */
-            width: 100%;
-            /* يجعل عرض الهيدر يمتد على عرض الصفحة بالكامل */
-            z-index: 1000;
-            /* يضمن أن يكون الهيدر فوق جميع العناصر الأخرى */
-            padding: 5px 0;
-            top: 0;
-            /* يحدد المسافة من أعلى الصفحة */
-            left: 0;
-            /* يحدد المسافة من الجانب الأيسر للصفحة */
-        }
-
-
-        .logo img {
-            max-width: 50px;
-            height: auto;
-            margin-right: 0px;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 95%;
-            margin: auto;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-grow: 1;
-        }
-
-        .nav-links li {
-            position: relative;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #C1E8FF;
-            font-size: 20px;
-            padding: 10px 40px;
-            margin-right: 30px;
-            transition: background 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            background: #00b4d8;
-            border-radius: 30px;
-        }
-
-        /*-----------------------------------------------gallery-------------------------------------------------------------- */
-        .gallery {
-            width: 90%;
-            margin: 30px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-gap: 20px;
-        }
-
-
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        /* التعديل في CSS */
-        .gallery img {
-            width: 100%;
-            height: 200px;
-            /* كل الصور ستكون بارتفاع 200 بكسل */
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, top 0.3s ease, border-radius 0.3s ease;
-            /* إضافة انتقال لتنعيم الحواف */
-            cursor: pointer;
-            object-fit: cover;
-        }
-
-        .gallery img.active {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            width: auto;
-            /* عرض الصورة عند التكبير */
-            height: auto;
-            /* ضبط الارتفاع تلقائياً ليحافظ على النسبة */
-            transform: translate(-50%, -50%) scale(1);
-            /* تكبير الصورة وتوسيطها */
-            z-index: 1000;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-            border-radius: 15px;
-            /* تنعيم الحواف عند التكبير */
-            transition: transform 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
-            /* تأكيد الانتقال بسلاسة */
-        }
-
-
-        /*-----------------------------------------------footer-------------------------------------------------------------- */
-/*-------------------------------------------------------------------------------------------------------------------- */
-footer {
-            background: #021024;
-            color: #C1E8FF;
-            padding: 20px 0;
-        }
-
-        footer .container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            width: 80%;
-            margin: auto;
-            gap: 20px;
-        }
-
-        footer h3 {
-            margin-bottom: 20px;
-            font-size: 20px;
-        }
-
-        .contact ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .menu-links ul {
-            list-style: none;
-        }
-
-        .contact li, .menu-links li {
-            margin-bottom: 10px;
-            font-size: 12px;
-        }
-
-        .contact a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        .menu-links {
-            width: 100%;
-        }
-
-        .menu-links ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .menu-links a {
-            display: block;
-            padding: 10px;
-            color: #C1E8FF;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .menu-links a:hover {
-            background: #00b4d8;
-        }
-
-/*-------------------------------------------------------------------------------------------------------------------- */
-
-    </style>
 </head>
 
 <body>
@@ -232,37 +43,23 @@ footer {
         <div class="site-mobile-menu-body"></div>
     </div>
 
-    <header class="site-navbar position-sticky" role="banner">
+    <header>
+    <a href="index.php" class="logo">
+        <img src="images/logo.png" alt="Logo">
+    </a>
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.php" >Home</a></li>
+        <li><a href="booking.php">Booking</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="contact.php">Contact</a></li>
+    </ul>
+</header>
 
-        <div class="container">
-            <div class="row align-items-center">
-
-                <div class="col-11 col-xl-2">
-                    <a href="index.php">
-                        <div class="logo">
-                            <img src="https://i.pinimg.com/originals/88/33/f2/8833f2811794959bdcc2433a512a7bac.png"
-                                alt="Dive Club Logo">
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-10 d-none d-xl-block">
-                    <nav class="site-navigation position-relative text-right" role="navigation">
-
-                        <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <li><a href="index.php"><span>Home</span></a></li>
-                            <li> <a href="booking.php"><span>booking</span></a></li>
-                            <li><a href="about.php"><span>About</span></a></li>
-                            <li><a href="contact.php"><span>Contact</span></a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a
-                        href="#" class="site-menu-toggle js-menu-toggle text-white"><span
-                            class="icon-menu h3"></span></a></div>
-            </div>
-        </div>
-        </div>
-    </header>
 
     <br><br><br>
     <!-- Gallery Section -->
@@ -302,34 +99,42 @@ footer {
     </div>
 
     <!-- footer -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="contact">
                 <h3>Contact Us</h3>
                 <ul class="contact-list">
-                    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Address</li>
-                    <li><i class="fa fa-mobile" aria-hidden="true"></i> +962 0787139731</li>
-                    <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:celestialsailors9@gmail.com">celestialsailors9@gmail.com</a>
-                    </li>
-                </ul>
+                <li><i class="bi bi-geo-alt"></i> Address: 123 Street, City</li>
+        <li><i class="bi bi-telephone"></i> +962 0787139731</li>
+        <li><i class="bi bi-envelope"></i> 
+            <a href="mailto:celestialsailors9@gmail.com">celestialsailors9@gmail.com</a>
+        </li>
+    </ul>
             </div>
             <div class="menu-links">
                 <h3>Menu Links</h3>
                 <ul class="link-menu">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="booking.php">Booking</a></li>                 
-                     <li><a href="about.php">About</a></li>
-                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="booking.php">Booking</a></li>
+                    <li><a href="about.php">About</a></li>
                 </ul>
+                <ul class="link-menu">
+                <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="gallery.php" class="active">Gallery</a></li>
+                    <li><a href="FAQ.php">FAQ </a></li>
+                    </ul>
             </div>
         </div>
     </footer>
-    <!-- end footer -->
 
-    <!-- JavaScript -->
-
-    <script>
+    <!-- Scripts -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+<script>
         // Select all images in the gallery
         const images = document.querySelectorAll('.gallery img');
 
@@ -349,12 +154,17 @@ footer {
                 }
             });
         });
-    </script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/main.js"></script>
-</body>
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+});
+</script>
+</body>
 </html>
