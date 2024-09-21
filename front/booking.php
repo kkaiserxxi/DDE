@@ -10,10 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>DeepDiveExpo-booking</title>
+    <title>Deep Sea-booking</title>
 
-    <link rel="icon" href="https://i.pinimg.com/originals/88/33/f2/8833f2811794959bdcc2433a512a7bac.png"
-        type="image/png">
+    <link rel="icon" href="images/logo.png" type="image/png">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -63,7 +63,7 @@
     <section class="booking-section">
         <div class="booking-form">
             <div class="form-cover" onclick="toggleForm(this)">
-                <img src="https://i.pinimg.com/236x/36/f9/c6/36f9c6e9b15c1104375ee7aef7c5ec81.jpg"
+                <img src="images\4.jpg"
                     alt="Click to reveal form">
                 <div class="form-title">VR Experience</div>
                 <div class="form-description">تجربة واقع افتراضي مذهلة تحت الماء.</div>
@@ -96,7 +96,7 @@
 
         <div class="booking-form">
             <div class="form-cover" onclick="toggleForm(this)">
-                <img src="https://i.pinimg.com/236x/c8/7a/29/c87a297d5b039263d9e9bbd783e66474.jpg"
+                <img src="images\3.png"
                     alt="Click to reveal form">
                 <div class="form-title">Underwater Photography</div>
                 <div class="form-description">التصوير تحت الماء مع أفضل المعدات.</div>
@@ -170,31 +170,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
 
+    // التعامل مع قائمة التنقل
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
-});
-function toggleForm(element) {
-    const form = element.nextElementSibling.nextElementSibling;
-    const formCover = element;
-    const bookingForm = form.parentElement;
-    
-    const formDisplay = window.getComputedStyle(form).display;
 
-    if (formDisplay === 'none') {
+    // تحسين عرض النماذج
+    document.querySelectorAll('.form-cover').forEach(cover => {
+        cover.addEventListener('click', () => toggleForm(cover));
+    });
+});
+
+// تحسين وظيفة toggleForm لجعلها أكثر كفاءة
+function toggleForm(formCover) {
+    const form = formCover.nextElementSibling.nextElementSibling;
+    const bookingForm = form.parentElement;
+
+    const isFormVisible = window.getComputedStyle(form).display !== 'none';
+
+    if (!isFormVisible) {
+        // عرض النموذج
         form.style.display = 'block';
-        formCover.style.transform = 'translateY(-100%)';
-        formCover.style.height = '0';
-        setTimeout(() => {
-            formCover.style.display = 'none';
-        }, 500); // Delay hiding the cover for the animation
+        animateCover(formCover, 'hide');
         bookingForm.classList.add('hidden');
     } else {
+        // إخفاء النموذج
         form.style.display = 'none';
-        formCover.style.display = 'block';
-        formCover.style.transform = 'translateY(0)';
-        formCover.style.height = '100%';
+        animateCover(formCover, 'show');
         bookingForm.classList.remove('hidden');
+    }
+}
+
+// وظيفة لعمل التحريك الخاص بالغلاف
+function animateCover(cover, action) {
+    if (action === 'hide') {
+        cover.style.transform = 'translateY(-100%)';
+        cover.style.height = '0';
+        setTimeout(() => {
+            cover.style.display = 'none';
+        }, 500); // الانتظار حتى ينتهي التحريك
+    } else if (action === 'show') {
+        cover.style.display = 'block';
+        setTimeout(() => {
+            cover.style.transform = 'translateY(0)';
+            cover.style.height = '100%';
+        }, 10); // لضمان تطبيق التعديلات بعد إعادة العرض
     }
 }
 
