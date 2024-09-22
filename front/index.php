@@ -92,7 +92,7 @@
         </div>
 
         <!-- Third Card -->
-        <div class="card card-left">
+        <div class="card card2-left">
             <div class="card-image">
                 <img src="images/69.jpeg" alt="Card 3 Image">
             </div>
@@ -104,15 +104,17 @@
 Types: Two primary types: Remotely Operated Vehicles (ROVs) and Autonomous Underwater Vehicles (AUVs).
 Uses: Scientific research, industrial inspections, military operations, environmental monitoring, and search-and-rescue missions.
 
-<h3>Key Features:</h3>
-<h2>.</h2>Equipped with cameras, sonar, and various sensors for mapping, data collection, and imaging.
-<h2>.</h2>Depth Capabilities: Capable of operating at extreme depths where human access is limited.
-<h2>.</h2>Technological Advancements: Increasingly sophisticated with better navigation, endurance, and autonomy.
-<h2>.</h2>Cost and Risk Reduction: Reduces the need for human divers in dangerous or hard-to-reach underwater environments.
-<h2>.</h2>Underwater drones, comprising Remotely Operated Vehicles (ROVs) and Autonomous Underwater Vehicles (AUVs), are revolutionizing the way we explore and operate in underwater environments.
-<h2>.</h2>These submersible robots are designed to navigate and perform tasks in oceans, lakes, and other aquatic settings that are difficult or dangerous for humans to access.
-<h2>.</h2>Equipped with high-tech tools such as HD cameras, sonar systems, and various environmental sensors, they allow for detailed exploration of marine ecosystems,
-<h2>.</h2>underwater structures, and geological formations. In the field of science, underwater drones are essential for conducting environmental monitoring, </p>
+<ul>
+  <li><strong>Equipped with advanced technology</strong>: Cameras, sonar, and various sensors for mapping, data collection, and imaging.</li>
+  <li><strong>Depth capabilities</strong>: Operates at extreme depths where human access is limited.</li>
+  <li><strong>Technological advancements</strong>: Enhanced navigation, endurance, and autonomy.</li>
+  <li><strong>Cost and risk reduction</strong>: Reduces the need for human divers in dangerous or hard-to-reach underwater environments.</li>
+  <li><strong>Revolutionizing underwater exploration</strong>: Underwater drones, including Remotely Operated Vehicles (ROVs) and Autonomous Underwater Vehicles (AUVs), are transforming underwater exploration and operations.</li>
+  <li><strong>Designed for difficult environments</strong>: These submersible robots are built to navigate and perform tasks in oceans, lakes, and other aquatic settings where human access is challenging or dangerous.</li>
+  <li><strong>High-tech tools</strong>: Equipped with HD cameras, sonar systems, and environmental sensors, allowing for detailed exploration of marine ecosystems, underwater structures, and geological formations.</li>
+  <li><strong>Essential for science</strong>: Underwater drones are crucial for conducting environmental monitoring and research in marine environments.</li>
+</ul>
+</p>
             </div>
         </div>
     </section>
