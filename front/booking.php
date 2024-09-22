@@ -16,6 +16,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
@@ -131,18 +132,20 @@
     <!-- footer -->
 
     <!-- Footer -->
-    <footer>
+   <!-- Footer -->
+   <footer>
         <div class="container">
-            <div class="contact">
-                <h3>Contact Us</h3>
-                <ul class="contact-list">
-                <li><i class="bi bi-geo-alt"></i> Address: 123 Street, City</li>
+        <div class="contact">
+    <h3>Contact Us</h3>
+    <ul class="contact-list">
+        <li><i class="bi bi-geo-alt"></i> Address: 123 Street, City</li>
         <li><i class="bi bi-telephone"></i> +962 0787139731</li>
         <li><i class="bi bi-envelope"></i> 
             <a href="mailto:celestialsailors9@gmail.com">celestialsailors9@gmail.com</a>
         </li>
     </ul>
-            </div>
+</div>
+
             <div class="menu-links">
                 <h3>Menu Links</h3>
                 <ul class="link-menu">
@@ -158,7 +161,6 @@
             </div>
         </div>
     </footer>
-
     <!-- Scripts -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
