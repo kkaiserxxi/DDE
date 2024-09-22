@@ -18,10 +18,10 @@
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 38px;
     transition: transform 0.3s ease;
     gap: 20px;
-    max-width: 800px; /* Max width for the card */
+    max-width: 783px; /* Max width for the card */
 }
 
 .card-left .card-image {
@@ -41,8 +41,8 @@
 }
 
 .card-image img {
-    width: 250px;
-    height: 200px;
+    width: 720px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
 }

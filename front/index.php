@@ -15,6 +15,34 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/video.css">
+    <style>
+        .card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 38px;
+    transition: transform 0.3s ease;
+    gap: 20px;
+    max-width: 783px; /* Max width for the card */
+}
+
+
+.card2-image img {
+    width: 720px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-image img {
+    width: 720px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+    </style>
 </head>
 
 <body>
@@ -92,8 +120,8 @@
         </div>
 
         <!-- Third Card -->
-        <div class="card card2-left">
-            <div class="card-image">
+        <div class="card card-left">
+            <div class="card2-image">
                 <img src="images/69.jpeg" alt="Card 3 Image">
             </div>
             <div class="card-content">
