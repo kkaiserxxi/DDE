@@ -13,7 +13,7 @@ body {
 
 /* Header */
 header {
-    background: #1e3a8a;
+    background: #10171F;
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -24,6 +24,7 @@ header {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #10171F;
 }
 
 .logo img {
@@ -92,7 +93,7 @@ header {
         position: absolute;
         top: 60px;
         right: 20px;
-        background: #1e3a8a;
+        background: #10171F;
         padding: 10px;
     }
 

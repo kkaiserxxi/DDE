@@ -8,32 +8,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- mobile metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>DeepDiveExpo-contact</title>
-
-    <link rel="icon" href="https://i.pinimg.com/originals/88/33/f2/8833f2811794959bdcc2433a512a7bac.png"
-        type="image/png">
+    <title>Deep Sea-contact</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/contact.css">
-
 </head>
 
 <body>
-
+    <?php
+    // Check if the 'success' parameter is set in the URL
+    if (isset($_GET['success']) && $_GET['success'] == 1) {
+        $successMessage = "Your message has been sent successfully!";
+    }
+    ?>
     <div class="site-mobile-menu">
         <div class="site-mobile-menu-header">
             <div class="site-mobile-menu-close mt-3">
@@ -44,28 +41,27 @@
     </div>
 
     <header>
-    <a href="index.php" class="logo">
-        <img src="images/logo.png" alt="Logo">
-    </a>
-    <div class="hamburger" id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="booking.php">Booking</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="contact.php" class="active">Contact</a></li>
-    </ul>
-</header>
-
+        <a href="index.php" class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </a>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="booking.php">Booking</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="contact.php" class="active">Contact</a></li>
+        </ul>
+    </header>
 
     <br><br>
 
     <section class="contact-section">
         <div class="contact-wrapper">
-        <div class="contact-container" style="margin-top: 50px;">
+            <div class="contact-container" style="margin-top: 50px;">
                 <div class="map-container">
                     <h2>Find Us Here</h2>
                     <iframe 
@@ -76,17 +72,22 @@
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-                
+                    </iframe>
                 </div>
             </div>
             <div class="contact-container">
                 <h2>Contact Us</h2>
                 
+                <?php if (isset($successMessage)): ?>
+                <div class="success-message">
+                    <?php echo $successMessage; ?>
+                </div>
+                <?php endif; ?>
+                
                 <form action="connect2.php" method="POST">
-                <label for="FullName">Full Name:</label>
-                <input type="text" id="FullName" name="FullName" required>
-    
+                    <label for="FullName">Full Name:</label>
+                    <input type="text" id="FullName" name="FullName" required>
+
                     <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email" required>
 
@@ -101,11 +102,11 @@
                 <h3>Our Contact Information</h3>
                 <ul>
                     <li><i class="bi bi-geo-alt"></i> Address: 123 Street, City</li>
-        <li><i class="bi bi-telephone"></i> +962 0787139731</li>
-        <li><i class="bi bi-envelope"></i> 
-            <a href="mailto:celestialsailors9@gmail.com">celestialsailors9@gmail.com</a>
-        </li>
-    </ul>
+                    <li><i class="bi bi-telephone"></i> +962 0787139731</li>
+                    <li><i class="bi bi-envelope"></i> 
+                        <a href="mailto:celestialsailors9@gmail.com">celestialsailors9@gmail.com</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -114,17 +115,16 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-        <div class="contact">
-    <h3>Contact Us</h3>
-    <ul class="contact-list">
-        <li><i class="bi bi-geo-alt"></i> Address: 123 Street, City</li>
-        <li><i class="bi bi-telephone"></i> +962 0787139731</li>
-        <li><i class="bi bi-envelope"></i> 
-            <a href="mailto:celestialsailors9@gmail.com">celestialsailors9@gmail.com</a>
-        </li>
-    </ul>
-</div>
-
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                    <li><i class="bi bi-geo-alt"></i> Address: 123 Street, City</li>
+                    <li><i class="bi bi-telephone"></i> +962 0787139731</li>
+                    <li><i class="bi bi-envelope"></i> 
+                        <a href="mailto:celestialsailors9@gmail.com">celestialsailors9@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
             <div class="menu-links">
                 <h3>Menu Links</h3>
                 <ul class="link-menu">
@@ -133,10 +133,10 @@
                     <li><a href="about.php">About</a></li>
                 </ul>
                 <ul class="link-menu">
-                <li><a href="contact.php" class="active">Contact Us</a></li>
+                    <li><a href="contact.php" class="active">Contact Us</a></li>
                     <li><a href="gallery.php">Gallery</a></li>
                     <li><a href="FAQ.php">FAQ </a></li>
-                    </ul>
+                </ul>
             </div>
         </div>
     </footer>
@@ -147,15 +147,15 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/main.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
     });
-});
-</script>
+    </script>
 </body>
 </html>

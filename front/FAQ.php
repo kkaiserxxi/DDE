@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>DeepDiveExpo-FAQ</title>
+    <title>Deep Sea-FAQ</title>
    
-    <link rel="icon" href="https://i.pinimg.com/originals/88/33/f2/8833f2811794959bdcc2433a512a7bac.png" type="image/png">
+    <link rel="icon" href="images/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
