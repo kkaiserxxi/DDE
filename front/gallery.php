@@ -10,10 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>Deep Sea-gallery</title>
+    <title>DeepDiveExpo</title>
 
-    <link rel="icon" href="images/logo.png" type="image/png">
-
+    <link rel="icon" href="https://i.pinimg.com/originals/88/33/f2/8833f2811794959bdcc2433a512a7bac.png"
+        type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -29,15 +29,6 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
 <link rel="stylesheet" href="css/gallery.css">
-<style>
-body {
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: #C1E8FF;
-  height: 100vh;
-  position: relative;
-}
-
-    </style>
 
 </head>
 
@@ -73,32 +64,30 @@ body {
     <br><br><br>
     <!-- Gallery Section -->
     <section class="gallery">
-        <img src="images\10.jpeg" alt="Gallery Image 1"
+        <img src="https://i.pinimg.com/564x/a7/5f/86/a75f8694d45f48d5535ec52c08794d35.jpg" alt="Gallery Image 1"
             onclick="openModal(this)">
-        <img src="images\11.jpeg" alt="Gallery Image 2"
+        <img src="https://i.pinimg.com/564x/57/c5/cf/57c5cfe9e13e3dff4ef9ac0fbe980929.jpg" alt="Gallery Image 2"
             onclick="openModal(this)">
-        <img src="images\12.jpeg" alt="Gallery Image 3"
+        <img src="https://i.pinimg.com/736x/56/c7/7d/56c77d0abe3365a2e45afca056fa622e.jpg" alt="Gallery Image 3"
             onclick="openModal(this)">
-        <img src="images\13.jpeg" alt="Gallery Image 4"
+        <img src="https://i.pinimg.com/564x/dd/74/86/dd7486973c58325107bed97165d1fab8.jpg" alt="Gallery Image 4"
             onclick="openModal(this)">
-        <img src="images\14.jpeg" alt="Gallery Image 5"
+        <img src="https://i.pinimg.com/564x/d9/94/96/d994963a233557996fe081ec0fd8a9ca.jpg" alt="Gallery Image 5"
             onclick="openModal(this)">
-        <img src="images\15.jpeg" alt="Gallery Image 6"
+        <img src="https://i.pinimg.com/564x/ca/c6/f8/cac6f8a6a4e492fe37653f385f0e11cb.jpg" alt="Gallery Image 6"
             onclick="openModal(this)">
-        <img src="images\16.jpeg" alt="Gallery Image 1"
+        <img src="https://i.pinimg.com/564x/a7/5f/86/a75f8694d45f48d5535ec52c08794d35.jpg" alt="Gallery Image 1"
             onclick="openModal(this)">
-        <img src="images\17.jpeg" alt="Gallery Image 2"
+        <img src="https://i.pinimg.com/564x/57/c5/cf/57c5cfe9e13e3dff4ef9ac0fbe980929.jpg" alt="Gallery Image 2"
             onclick="openModal(this)">
-        <img src="images\18.jpeg" alt="Gallery Image 3"
+        <img src="https://i.pinimg.com/736x/56/c7/7d/56c77d0abe3365a2e45afca056fa622e.jpg" alt="Gallery Image 3"
             onclick="openModal(this)">
-        <img src="images\19.jpeg" alt="Gallery Image 4"
+        <img src="https://i.pinimg.com/564x/dd/74/86/dd7486973c58325107bed97165d1fab8.jpg" alt="Gallery Image 4"
             onclick="openModal(this)">
-        <img src="images\20.jpeg" alt="Gallery Image 5"
+        <img src="https://i.pinimg.com/564x/d9/94/96/d994963a233557996fe081ec0fd8a9ca.jpg" alt="Gallery Image 5"
             onclick="openModal(this)">
-        <img src="images\21.jpeg" alt="Gallery Image 6"
+        <img src="https://i.pinimg.com/564x/ca/c6/f8/cac6f8a6a4e492fe37653f385f0e11cb.jpg" alt="Gallery Image 6"
             onclick="openModal(this)">
-        <img src="images\22.jpeg" alt="Gallery Image 5"
-            onclick="openModal(this)">            
 
 
     </section>

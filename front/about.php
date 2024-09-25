@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- mobile metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Deep Sea-about</title>
+    <title>DeepDiveExpo-about</title>
    
     <link rel="icon" href="images/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
@@ -61,7 +61,7 @@
         <h1>Who we are</h1>
         <div class="about-content">
             <img src="images/team.JPG" alt="About Dive Club">
-            <p>Welcome to DeepSeaExplorer(DSE), where we provide the best diving experiences around the world. Our team of certified professionals is dedicated to ensuring that every dive is safe, enjoyable, and unforgettable. Whether you're a beginner or an experienced diver, we have something for everyone. Explore our range of services and join us for your next adventure.</p>
+            <p>Welcome to Dive Club, where we provide the best diving experiences around the world. Our team of certified professionals is dedicated to ensuring that every dive is safe, enjoyable, and unforgettable. Whether you're a beginner or an experienced diver, we have something for everyone. Explore our range of services and join us for your next adventure.</p>
             
             <h1>Meet Our Team</h1>
             <br><br>
@@ -70,109 +70,63 @@
                     <img src="images\yaman.jpeg" alt="Team Member">
                     <div class="team-member-info">
                         <h3>Yaman Anis</h3>
-                        <p>
-I am a mechatronics engineering student with experience in mechanical engineering, gained through
-participation in numerous competitions and projects, both simple and complex, with Jordanian
-companies like JODDB. I possess leadership and organizational skills for teams and communities. Now, I
-aim to deepen my knowledge in programming through learning with Zaid and Hisham.
-                        </p>
+                        <p>Yaman is our lead instructor with over 15 years of experience in diving. His passion for the ocean and commitment to safety make him an invaluable part of our team.</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <img src="images\mahdi.jpeg" alt="Team Member">
                     <div class="team-member-info">
                         <h3>Mahdi Misk</h3>
-                        <p>
-                        I'm Mahdi. I love working with electronics and have previously worked in board repair shops. I specialize in
-programming languages such as Python, C++, HTML, CSS, and JavaScript. I have experience with multiple
-websites and projects involving OpenCV. I've also participated in Solver and Sumo tournaments.
-In this project, I will be working on developing an application, and I aim to learn mechanics from great
-people like Momen and Yaman in a professional manner.
-
-                        </p>
+                        <p>Mahdi is a certified dive master and marine biologist. His knowledge of marine life and expertise in underwater photography make every dive educational and exciting.</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <img src="images\majid.jpeg" alt="Team Member">
                     <div class="team-member-info">
                         <h3>Majid Barham</h3>
-                        <p>A passionate student with strong skills in machine learning and experience in algorithm development. Completed an IoT course and currently focused on expanding my knowledge in electronics, embedded systems, and hardware-software interfacing. Proficient in HTML, CSS, and JavaScript, with a keen interest in integrating these skills with my understanding of circuit design and embedded systems.
-                        </p>
+                        <p>Majid is a certified dive master who specializes in underwater photography. He loves sharing his knowledge and helping divers capture their memories.</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <img src="images\ZAID.jpeg" alt="Team Member">
                     <div class="team-member-info">
                         <h3>Zaid Aldasht</h3>
-                        <p>
-                        Im zaid , I’am a mechatronics engineering student , i specialize in ROS and robot controller system design
-My previous work includes working on GPS systems and different imaging software and have experience
-in them , I would like to improve my mechanical design strenghs from moamen and yaman .
-
-                            </p>
-                    
-                        </div>
+                        <p>Zaid is a professional diver with a deep understanding of marine ecosystems. He enjoys guiding divers through the most beautiful underwater landscapes.</p>
+                    </div>
                 </div>
                 <div class="team-member">
                     <img src="images\HSSSS.jpeg" alt="Team Member">
                     <div class="team-member-info">
                         <h3>Hossam AL adham</h3>
-                        <p>
-                        I'm a mechatronics engineer with limited experience in these fields. I've worked with Python and
-programming in general, and I'm looking to learn ROS and machine learning soon. I'm interested in
-expanding my knowledge beyond programming into other areas as well.
-
-                        </p>
+                        <p>Hossam is a certified dive master who specializes in underwater photography. She loves sharing her knowledge and helping divers capture their memories.</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <img src="images\Ahmad.jpeg" alt="Team Member">
                     <div class="team-member-info">
                         <h3>Ahmad Abu-Libdeh</h3>
-                        <p>
-                        My experience in mechatronics engineering focuses on robotics and automation, and I am currently
-making excellent progress in electronics. I have a strong background in Fusion 360, and I aspire to learn
-software development from Hisham and Zaid.
-
-                        </p>
+                        <p>Ahmad is a certified dive master who specializes in underwater photography. She loves sharing her knowledge and helping divers capture their memories.</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <img src="images\zakaria.jpeg" alt="Team Member">
                     <div class="team-member-info">
                         <h3>zakaria aladem</h3>
-                        <p>
-                        I am a mechatronics engineer that is pationate about robotics I would like to work on and integrate on
-circuit boards design . my past experiences include participating in many different robotic competitions
-I have a strong background in mechanical design using solidworks .
-
-                        </p>
+                        <p>zakaria is a certified dive master who specializes in underwater photography. She loves sharing her knowledge and helping divers capture their memories.</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <img src="images\hisham.jpeg" alt="Team Member">
                     <div class="team-member-info">
                         <h3>hisham al saif</h3>
-                        <p>
-                        I'm a mechatronics engineering student who enjoys working on programming involving embedded
-systems, ROS, and computer vision. I've learned them through some courses and applied what I learned
-to projects or competitions. I want to learn more about mechanical engineering through Yaman and
-Momen
-
-                        </p>
+                        <p>hisham is a certified dive master who specializes in underwater photography. She loves sharing her knowledge and helping divers capture their memories.</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <img src="images\Moamen.jpeg" alt="Team Member">
                     <div class="team-member-info">
                         <h3>moamen erebeh</h3>
-                        <p>
-                        I am a mechanical engineering student with extensive experience in mechanics, specializing in motor
-calculations and transmission dynamics. I excel in design using SolidWorks and have worked on diverse
-mechanical projects, including collaborations with JODDB and participating in the annual NASA space
-challenges.In this project, I will focus on design and theoretical research. I aim to learn software
-development from fellow team members like Mahdi and Hisham to enhance my skills further
-                        </p>
+                        <p>moamen is a certified dive master who specializes in underwater photography. She loves sharing her knowledge and helping divers capture their memories.</p>
                     </div>
                 </div>
                 

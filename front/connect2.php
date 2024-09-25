@@ -5,7 +5,7 @@ $email = $_POST['email'];
 $message = $_POST['message'];
 
 // Database connection
-$conn = new mysqli('localhost', 'MSI', 'msi12', '');
+$conn = new mysqli('localhost', 'MSI', 'msi12', 'deepdiveexpo');
 
 if($conn->connect_error){
     die('Connection Failed: ' . $conn->connect_error);

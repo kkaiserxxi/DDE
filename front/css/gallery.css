@@ -7,6 +7,9 @@
 }
 
 
+.gallery img:hover {
+    transform: scale(1.05);
+}
 
 /* التعديل في CSS */
 .gallery img {
@@ -25,8 +28,9 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 80%;
-    height: 80%;
+    width: auto;
+    /* عرض الصورة عند التكبير */
+    height: auto;
     /* ضبط الارتفاع تلقائياً ليحافظ على النسبة */
     transform: translate(-50%, -50%) scale(1);
     /* تكبير الصورة وتوسيطها */

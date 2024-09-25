@@ -10,13 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>Deep Sea-booking</title>
+    <title>DeepDiveExpo-booking</title>
 
-    <link rel="icon" href="images/logo.png" type="image/png">
-
+    <link rel="icon" href="https://i.pinimg.com/originals/88/33/f2/8833f2811794959bdcc2433a512a7bac.png"
+        type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
@@ -30,16 +29,6 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/booking.css">
-
-    <style>
-body {
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: #C1E8FF;
-  height: 150vh;
-  position: relative;
-}
-
-    </style>
 
 </head>
 
@@ -74,7 +63,7 @@ body {
     <section class="booking-section">
         <div class="booking-form">
             <div class="form-cover" onclick="toggleForm(this)">
-                <img src="images\4.jpg"
+                <img src="https://i.pinimg.com/236x/36/f9/c6/36f9c6e9b15c1104375ee7aef7c5ec81.jpg"
                     alt="Click to reveal form">
                 <div class="form-title">VR Experience</div>
                 <div class="form-description">تجربة واقع افتراضي مذهلة تحت الماء.</div>
@@ -107,7 +96,7 @@ body {
 
         <div class="booking-form">
             <div class="form-cover" onclick="toggleForm(this)">
-                <img src="images\3.png"
+                <img src="https://i.pinimg.com/236x/c8/7a/29/c87a297d5b039263d9e9bbd783e66474.jpg"
                     alt="Click to reveal form">
                 <div class="form-title">Underwater Photography</div>
                 <div class="form-description">التصوير تحت الماء مع أفضل المعدات.</div>
@@ -142,20 +131,18 @@ body {
     <!-- footer -->
 
     <!-- Footer -->
-   <!-- Footer -->
-   <footer>
+    <footer>
         <div class="container">
-        <div class="contact">
-    <h3>Contact Us</h3>
-    <ul class="contact-list">
-        <li><i class="bi bi-geo-alt"></i> Address: 123 Street, City</li>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                <li><i class="bi bi-geo-alt"></i> Address: 123 Street, City</li>
         <li><i class="bi bi-telephone"></i> +962 0787139731</li>
         <li><i class="bi bi-envelope"></i> 
             <a href="mailto:celestialsailors9@gmail.com">celestialsailors9@gmail.com</a>
         </li>
     </ul>
-</div>
-
+            </div>
             <div class="menu-links">
                 <h3>Menu Links</h3>
                 <ul class="link-menu">
@@ -171,6 +158,7 @@ body {
             </div>
         </div>
     </footer>
+
     <!-- Scripts -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -182,51 +170,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
 
-    // التعامل مع قائمة التنقل
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
-
-    // تحسين عرض النماذج
-    document.querySelectorAll('.form-cover').forEach(cover => {
-        cover.addEventListener('click', () => toggleForm(cover));
-    });
 });
-
-// تحسين وظيفة toggleForm لجعلها أكثر كفاءة
-function toggleForm(formCover) {
-    const form = formCover.nextElementSibling.nextElementSibling;
+function toggleForm(element) {
+    const form = element.nextElementSibling.nextElementSibling;
+    const formCover = element;
     const bookingForm = form.parentElement;
+    
+    const formDisplay = window.getComputedStyle(form).display;
 
-    const isFormVisible = window.getComputedStyle(form).display !== 'none';
-
-    if (!isFormVisible) {
-        // عرض النموذج
+    if (formDisplay === 'none') {
         form.style.display = 'block';
-        animateCover(formCover, 'hide');
+        formCover.style.transform = 'translateY(-100%)';
+        formCover.style.height = '0';
+        setTimeout(() => {
+            formCover.style.display = 'none';
+        }, 500); // Delay hiding the cover for the animation
         bookingForm.classList.add('hidden');
     } else {
-        // إخفاء النموذج
         form.style.display = 'none';
-        animateCover(formCover, 'show');
+        formCover.style.display = 'block';
+        formCover.style.transform = 'translateY(0)';
+        formCover.style.height = '100%';
         bookingForm.classList.remove('hidden');
-    }
-}
-
-// وظيفة لعمل التحريك الخاص بالغلاف
-function animateCover(cover, action) {
-    if (action === 'hide') {
-        cover.style.transform = 'translateY(-100%)';
-        cover.style.height = '0';
-        setTimeout(() => {
-            cover.style.display = 'none';
-        }, 500); // الانتظار حتى ينتهي التحريك
-    } else if (action === 'show') {
-        cover.style.display = 'block';
-        setTimeout(() => {
-            cover.style.transform = 'translateY(0)';
-            cover.style.height = '100%';
-        }, 10); // لضمان تطبيق التعديلات بعد إعادة العرض
     }
 }
 
