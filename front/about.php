@@ -61,7 +61,7 @@
         <h1>Who we are</h1>
         <div class="about-content">
             <img src="images/team.JPG" alt="About Dive Club">
-            <p>Welcome to Dive Club, where we provide the best diving experiences around the world. Our team of certified professionals is dedicated to ensuring that every dive is safe, enjoyable, and unforgettable. Whether you're a beginner or an experienced diver, we have something for everyone. Explore our range of services and join us for your next adventure.</p>
+            <p>Welcome to deepdivesea, where we provide the best diving experiences around the world. Our team of certified professionals is dedicated to ensuring that every dive is safe, enjoyable, and unforgettable. Whether you're a beginner or an experienced diver, we have something for everyone. Explore our range of services and join us for your next adventure.</p>
             
             <h1>Meet Our Team</h1>
             <br><br>
