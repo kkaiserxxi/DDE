@@ -458,6 +458,9 @@ footer h3 {
 .more-text {
     display: none;
 }
+.dots {
+    display: inline;
+}
 .read-more-btn {
     background-color: #007bff;
     color: white;
