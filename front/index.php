@@ -46,8 +46,32 @@
         <h1>Deeb Sea<br></h1>
         <p>Your journey to the depths of the ocean begins here.
            Discover the mysteries and beauty that await below the surface.</p>
-    </div>
+           <a href="booking.php" class="booking-btn">
+            <i class="fas fa-calendar-alt"></i> Book Now</a>   
+         </div>
+    
 </div>
+
+    <!-- Icon Links Section -->
+    <section class="icon-links">
+    <div class="icon-container">
+        <a href="gallery.php" class="icon-link">
+            <img src="https://i.pinimg.com/originals/94/b8/42/94b84214e16e860d271164979a885af4.png" alt="gallery" class="icon-img">
+            <span class="icon-name">Gallery</span>
+        </a>
+    </div>
+    <div class="icon-container">
+        <a href="FAQ.php" class="icon-link">
+            <img src="https://i.pinimg.com/originals/94/81/a1/9481a1c52a656383028335f1e901b007.png" alt="FAQ" class="icon-img">
+            <span class="icon-name">FAQ</span>
+        </a>
+    </div>
+    <div class="icon-container">
+        <a href="booking.php" class="icon-link">
+            <img src="https://i.pinimg.com/originals/79/07/b2/7907b26d0a90c70f8bf97061eb67e3db.png" alt="booking" class="icon-img">
+            <span class="icon-name">Booking</span>
+        </a>
+    </div>
 
     <!-- Icon Links Section -->
     <section class="icon-links">
@@ -150,6 +174,7 @@
             </div>
         </div>
     </section>
+
 
 
 <!-- Video Section -->
