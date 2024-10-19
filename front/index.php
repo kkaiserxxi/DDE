@@ -12,12 +12,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
-
     <link rel="stylesheet" href="css/index.css">
 
 </head>
 
-
+<!--  -->
 <body>
     <!-- Header -->
     <header>
