@@ -469,3 +469,19 @@ footer h3 {
     }
 }
 
+.more-text {
+    display: none;
+}
+.dots {
+    display: inline;
+}
+.read-more-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.read-more-btn:hover {
+    background-color: #0056b3;
+}

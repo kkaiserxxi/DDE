@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 08, 2024 at 03:33 PM
+-- Generation Time: Sep 30, 2024 at 12:06 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -66,10 +66,7 @@ CREATE TABLE `booking` (
 INSERT INTO `booking` (`booking_id`, `booking_date`, `start_time`, `end_time`, `status`, `Additional_Requests`, `FullName`, `email`) VALUES
 (1, '2024-09-15', '10:00:00', '12:00:00', 'Confirmed', 'can we do multiple shots near the coral reeves ', '', ''),
 (2, '2024-09-20', '14:00:00', '16:00:00', 'Pending', '', '', ''),
-(12, '2024-09-10', '19:28:00', '20:28:00', NULL, 'amongus', 'yaman585', 'john@gmail.com'),
-(13, '2024-09-21', '20:55:00', '19:56:00', NULL, 'amongus', 'yaman585', 'john666@example.com'),
-(14, '2024-09-11', '17:58:00', '19:58:00', NULL, 'amongus', 'yaman58', 'john@gmail.com'),
-(15, '2030-01-08', '19:13:00', '20:13:00', NULL, 'banki', 'majid', 'majidfinn22@gmail.com');
+(17, '2024-09-30', '05:14:00', '06:14:00', NULL, 'orange summer challenge ', 'hamza', 'majidbarham8@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -95,9 +92,7 @@ INSERT INTO `booking_vr2` (`booking_id`, `FullName`, `email`, `booking_date`, `s
 (1, 'John Doe', 'john.doe@example.com', '2024-09-15', '09:00:00', '11:00:00', 'No special requests'),
 (2, 'Jane Smith', 'jane.smith@example.com', '2024-09-16', '13:00:00', '15:00:00', 'Requires wheelchair access'),
 (3, 'Alice Johnson', 'alice.johnson@example.com', '2024-09-17', '10:00:00', '12:00:00', 'Extra camera equipment needed'),
-(4, 'Bob Brown', 'bob.brown@example.com', '2024-09-18', '14:00:00', '16:00:00', 'Bring lunch'),
-(5, 'Emily Davis', 'emily.davis@example.com', '2024-09-19', '08:00:00', '10:00:00', 'Allergic to peanuts'),
-(6, 'yaman58555', 'john666@example.com', '2024-09-11', '18:12:00', '22:12:00', 'amongus');
+(13, 'majid', 'majidfinn22@gmail.com', '2024-09-14', '00:11:00', '02:14:00', 'as');
 
 -- --------------------------------------------------------
 
@@ -120,15 +115,21 @@ CREATE TABLE `contactus` (
 --
 
 INSERT INTO `contactus` (`contact_id`, `user_id`, `message`, `contact_date`, `status`, `FullName`, `email`) VALUES
-(1, 1, 'I have a question about my booking.', '2024-08-26 10:47:43', 'Open', '', ''),
-(2, 2, 'Can I reschedule my booking?', '2024-08-26 10:47:43', 'Closed', '', ''),
-(7, 10, 'i want to goo swing is there any near site to swim whit the dorne', '2024-09-08 11:10:34', NULL, '', ''),
 (8, NULL, 'help me please', '2024-09-08 13:10:44', NULL, 'yaman58', 'luffymajid434@hotmail.com'),
 (9, NULL, 'help me please', '2024-09-08 13:11:11', NULL, 'yaman58', 'luffymajid434@hotmail.com'),
 (10, NULL, 'help me please', '2024-09-08 13:11:22', NULL, 'yaman58', 'luffymajid434@hotmail.com'),
 (11, NULL, '555555', '2024-09-08 13:11:32', NULL, 'yaman58', 'john666@example.com'),
 (12, NULL, 'send help please php is suck', '2024-09-08 13:13:53', NULL, 'majid', 'majidfinn22@gmail.com'),
-(13, NULL, 'report', '2024-09-08 13:23:23', NULL, 'ahmad', 'john@gmail.com');
+(13, NULL, 'report', '2024-09-08 13:23:23', NULL, 'ahmad', 'john@gmail.com'),
+(14, NULL, 'brazilin miku ', '2024-09-10 17:11:02', NULL, 'yaman58', 'majidfinn22@gmai.com'),
+(15, NULL, 'persona 3', '2024-09-10 17:14:20', NULL, 'yaman58', 'majidfinn22@gmail.com'),
+(16, NULL, 'persona 6', '2024-09-10 17:15:05', NULL, 'majid', 'majidfinn22@gmai.com'),
+(17, NULL, 'persona 7\r\n', '2024-09-10 17:15:19', NULL, 'yaman58', 'majidfinn22@gmail.com'),
+(18, NULL, 'my name is jefff', '2024-09-10 17:26:30', NULL, 'majid', 'majidfinn22@gmai.com'),
+(19, NULL, 'asdads', '2024-09-10 17:26:36', NULL, 'yaman58', 'majidfinn22@gmai.com'),
+(20, NULL, 'aaaa', '2024-09-10 17:46:10', NULL, 'yaman58', 'majidfinn22@gmai.com'),
+(21, NULL, 'aaaaa', '2024-09-10 17:47:39', NULL, 'yaman58', 'majidfinn22@gmail.com'),
+(22, NULL, 'axadada', '2024-09-15 10:48:25', NULL, 'majid', 'majidfinn22@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -256,19 +257,19 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `booking_vr2`
 --
 ALTER TABLE `booking_vr2`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `contactus`
 --
 ALTER TABLE `contactus`
-  MODIFY `contact_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `contact_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `locations`
