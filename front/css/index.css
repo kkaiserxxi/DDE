@@ -17,7 +17,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    padding: 10px 20px;
+    padding: 10px 40px;
     top: 0;
     left: 0;
     display: flex;
@@ -27,7 +27,7 @@ header {
 }
 
 .logo img {
-    max-width: 120px;
+    max-width: 70px;
     height: auto;
 }
 
@@ -45,8 +45,8 @@ header {
 .nav-links a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
-    padding: 8px 16px;
+    font-size: 14px;
+    padding: 8px ;
     transition: background 0.3s ease, color 0.3s ease;
     border-radius: 4px;
     display: block; /* Ensure the link takes full width */
@@ -155,18 +155,68 @@ header {
 }
 
 /* Hero Content */
+/* Hero Content */
 .hero-content {
-    z-index: 1; /* لضمان أن المحتوى يظهر فوق الصورة */
-    text-align: center; /* توسيط النص */
+    position: absolute; /* تمكين التمركز داخل الخلفية */
+    bottom: 0; /* وضع المحتوى في أسفل الصورة */
+    left: 0; /* لتكون على الجانب الأيسر */
+    right: 0; /* تمتد بعرض كامل الحاوية */
+    z-index: 1;
+    text-align: center;
     display: flex;
-    flex-direction: column; /* ترتيب العناصر عمودياً */
-    align-items: center; /* توسيط العناصر عمودياً */
-    background-color: rgba(85, 85, 85, 0.7); /* خلفية شفافة قليلاً لتحسين القراءة */
-    padding: 40px; /* حشوة داخلية */
-    border-radius: 15px; /* زوايا دائرية */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* ظل خفيف */
-    margin: 20px; /* مسافة حول المحتوى */
-    color: #f0f4f8; /* لون النص */
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(85, 85, 85, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #f0f4f8;
+}
+/* Booking Button */
+.booking-btn {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 30px;
+    margin-top: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden; /* لإخفاء تأثير الأيقونة أثناء الحركة */
+}
+
+.booking-btn i {
+    margin-right: 10px; /* مسافة بين الأيقونة والنص */
+    transition: transform 0.3s ease; /* تأثير تحريك الأيقونة */
+}
+
+.booking-btn:hover {
+    background-color: #3b82f6;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.booking-btn:hover i {
+    transform: rotate(360deg); /* تدوير الأيقونة */
+}
+
+.booking-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.75s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+.booking-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
 }
 
 /* Hero Title */
@@ -241,42 +291,6 @@ header {
     margin: 8px auto; /* توسيط الصورة */
 }
 
-
-/* Card Section */
-.card-section {
-    padding: 50px 20px;
-}
-
-.card-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background: #f0f4f8;
-}
-
-.card {
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 10px;
-    flex: 1 1 300px; /* السماح بتغيير العرض */
-    max-width: 400px; /* عرض أقصى */
-    min-width: 300px;
-    
-    
-}
-
-.card-image img {
-    width: 100%;
-    height: 389.600px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.card-content {
-    padding: 15px;
-    margin: 10px;
-}
 
 
 /* Footer */
